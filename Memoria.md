@@ -141,3 +141,5 @@ git commit -m "Añaido ejercicio 2 y la parte correspondiente de la memoria"
 
 git push -u origin main
 ````
+
+![Subiendo el ejercicio 3](/images/imagen_14.png)
