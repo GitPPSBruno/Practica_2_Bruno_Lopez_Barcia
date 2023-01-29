@@ -84,3 +84,60 @@ git push -u origin main
 ````
 
 ![Pushear al repositorio el ejercicio 1](/images/imagen_7.png)
+
+
+---- 
+3. Crea un contenedor para cada una de esas imagenes y verifica que funciona. Para y borra dicho contenedor.
+----
+
+Lo primero que hacer es un _docker build_ del dockerfile de cada ejercicio. 
+
+Docker build Ejercicio 1:
+
+![Dockerbuild ejercicio1](/images/imagen_8.png)
+
+Como podemos ver nos crea la imagen del contenedor; la imagen de php que aparece es la imagen que se ha descargado el _docker build_ para poder crear el contenedor.
+
+Ahora debemos de realizar lo mismo para el _Dockerfile_ del ejercicio 2.
+
+Docker build Ejercicio 2:
+
+![Docker build ejercicio2](/images/imagen_9.png)
+![docker build ejercicio2 parte2](/images/imagen_10.png)
+
+Como podemos ver ahora si hacemos un _docker image ls_ nos aparecen ambas imagenes:
+
+![docker image ls](/images/imagen_11.png)
+
+Ahora debemos de correr ambos contenedores a la vez. 
+
+Para ello usaremos usaremos los siguientes comandos:
+
+`````bash
+docker run -d --name ejercicio-1 php-ejercicio-1:latest #Primer ejercicio
+
+docker run --name ejercicio-2 php-ejercicio-2:latest #Segundo ejercicio
+`````
+
+Una vez hayamos corrido esos comandos podemos comprobar que estan funcionando, entrando a las paginas web y haciendo un ```docker ps``` 
+
+![comprobando que los contenedores funcionan](/images/imagen_12.png)
+
+Ahora para pararlos y borrarlos solo debemos de ejecutar los comandos: 
+
+`````bash
+docker stop NOMBRE_CONTENEDOR
+docker rm NOMBRE_CONTENEDOR
+`````
+
+![parando y borrando los contenedores](/images/imagen_13.png)
+
+Ahora debemos de subir los cambios realizados al github ejecutando los siguientes comandos:
+
+````bash
+git add Ejercicio2/ images/ Memoria.md
+
+git commit -m "Añaido ejercicio 2 y la parte correspondiente de la memoria"
+
+git push -u origin main
+````

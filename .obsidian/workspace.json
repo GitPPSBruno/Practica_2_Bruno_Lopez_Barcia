@@ -11,8 +11,12 @@
             "id": "1ab6e6da71eaca02",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Memoria.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Memoria.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Memoria.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Memoria.md"
+              }
             }
           }
         ]
@@ -138,14 +146,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "470f8da0559409a6",
+  "active": "1ab6e6da71eaca02",
   "lastOpenFiles": [
+    "images/imagen_12.png",
     "Memoria.md",
+    "images/imagen_13.png",
+    "images/imagen_11.png",
+    "images/imagen_14.png",
+    "().md",
     "images.md",
-    "images/imagen_7.png",
-    "images/imagen_3.png",
-    "images/imagen_1.png",
-    "images/imagen_2.png",
-    "images/imagen_0.png"
+    "images/imagen_7.png"
   ]
 }
