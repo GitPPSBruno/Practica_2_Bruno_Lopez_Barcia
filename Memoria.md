@@ -14,13 +14,12 @@ Una vez nos salga eso debemos de ir a la carpeta donde queremos inicializar nues
 
 ![Inicializando el repositorio en local](./images/imagen_1.png)
 
+---
 ## Ejercicio 1
 
-**
 1. Crea un Dockerfile que partiendo de una imagen PHP genera una imagen que:
-  1. Copia una aplicacion en PHP a un directorio del contenedor. Esta aplicacion se debe copiar directamente desde un directorio del anfitrión. Para facilitar las cosas, debe de ser una aplicacion sencilla que no emplee bases de datos (ya que sino tambien habría que instalar un Mysql)
-**
-
+  - Copia una aplicacion en PHP a un directorio del contenedor. Esta aplicacion se debe copiar directamente desde un directorio del anfitrión. Para facilitar las cosas, debe de ser una aplicacion sencilla que no emplee bases de datos (ya que sino tambien habría que instalar un Mysql)
+---
 Una vez que tenemos los prerequisitos hechos debemos de crear la carpeta del Ejercicio 1. En esta carpeta añadiremos el Dockerfile del ejercicio1, del que luego generaremos la imagen. 
 
 Contenido carpeta Ejercicio1:
@@ -32,4 +31,13 @@ El contenido del Dockerfile es el siguiente:
 
 En la linea uno lo que hacemos en usar una imagen de PHP en su version 7.4 con apache. En la linea 2 copiamos la carpeta PHP de nuestra maquina y por ultimo debemos de exponer el puerto 80.
 
+Una vez que tenemos configurado el _Dockerfile_ y las carpetas configuradas lo que tenemos que hacer es subir ambas carpetas al repositorio de Github. Debemos de ejecutar los siguientes comandos
+
+````bash
+git add Ejercicio1/ images/ Memoria.md
+
+git commit -m "Añaido ejercicio 1 y la parte correspondiente de la memoria"
+
+git push -u origin main
+````
 
