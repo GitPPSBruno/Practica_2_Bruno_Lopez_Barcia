@@ -1,7 +1,5 @@
 # Memoria Practica 2 Bruno Lopez Barcia 
 
-----
-
 ## PreRequisitos
 
 Lo primero que debemos de hacer es crear es el repositorio de git e inicializar el repositorio en local.
@@ -137,9 +135,67 @@ Ahora debemos de subir los cambios realizados al github ejecutando los siguiente
 ````bash
 git add Ejercicio2/ images/ Memoria.md
 
-git commit -m "Añaido ejercicio 2 y la parte correspondiente de la memoria"
+git commit -m "Añadiendo los comandos del ejercicio 3 a la memoria"
 
 git push -u origin main
 ````
 
 ![Subiendo el ejercicio 3](/images/imagen_14.png)
+
+
+----
+4. Emplea un comando para lanzar 20 contenedoes de la segunda imagen, cada uno mapeado en un puerto distinto del anfitrión. Cuando veas que funcionan, para y borra dichos contenedores.
+----
+
+Para realizar esto no hay ninguna forma nativa con docker de hacerlo, por lo que debemos de hacer con un loop _for_ de bash.
+
+El comando a ejecutar es el siguiente:
+````bash
+for i in `seq 1 20`; do 
+docker run -p $((900+$i)) --name ejercicio-2-contenedor-$i php-ejercicio-2;
+done
+````
+
+El resultado de ejecutar ese comando seria el siguiente:
+
+![Correr 20 contenedores](/images/imagen_15.png)
+
+Como se ve este comando saca una lista de los contenedores creados.
+
+Ahora debemos de probar si se puede conectar a algun contenedor de los que hemos creado.
+
+Para ello utilizaremos el navegador.
+
+![probando a conectarse al contenedor](/images/imagen_17.png)
+
+Como vemos en la captura anterior efectivamente se permite la conexión en distintos puertos.
+
+Ahora debemos de parar los contenedores que hemos creado.
+
+Para para los contanedores ejecutaremos el siguiente comando:
+````bash
+for i in `seq 1 20`; do 
+docker stop ejercicio-2-contenedor-$i;
+done
+````
+
+Una vez parados podemos eliminarlos con el siguiente comando:
+````bash
+for i in `seq 1 20`; do 
+docker rm ejercicio-2-contenedor-$i;
+done
+````
+
+Si los ejecutamos vemos lo siguiente:
+
+![parando y borrando contenedores](/images/imagen_18.png)
+Como se puede primero se paran los contenedores y luego se procede a borrarlos.
+
+Por ultimo debemos de subir la nueva version de la Memoria a Github para ello utilizaremos el siguiente comando:
+````bash
+git add Ejercicio2/ images/ Memoria.md
+
+git commit -m "Añadiendo los comandos del ejercicio 4 a la memoria"
+
+git push -u origin main
+````
