@@ -199,3 +199,5 @@ git commit -m "Añadiendo los comandos del ejercicio 4 a la memoria"
 
 git push -u origin main
 ````
+
+![haciendo push al repo](/images/imagen_19.png)
